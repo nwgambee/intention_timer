@@ -1,119 +1,127 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
+  margin: 0;
 }
 
 body {
-  background-color: #2B2733;
+  margin: 0 auto;
   width: 100%;
-  margin: auto;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 header {
   background-color: #46424D;
+  color: #FFF;
+  margin-top: 0;
+  /* display: flex; */
   width: 100%;
-  padding: 8px 0px;
 }
 
 h1 {
-  color: #FFF;
-  font-size: 22px;
-  text-align: center;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
 }
 
 main {
   background-color: #2B2733;
+  padding: 10px;
+  padding-top: 20px;
+  margin: 0px;
+  /* width: 63%; */
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 10px 35px 15px 35px;
-  width: 66%;
 }
 
-.subheader {
+h2 {
   color: #CBC9CF;
-  font-size: 23px;
-  width: 100%;
-  padding-left: 15px;
-  padding-bottom: 4px;
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
 
-.setup {
-  /* border: 2px solid white; */
+.left-section {
+  padding: 50px;
   background-color: #46424D;
-  border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px 15px 15px 15px;
-  padding: 30px 5px 23px 30px;
+  /* height: 65vh; */
+  margin: 20px;
 }
 
-.category {
-  color: #FFF;
-  font-size: 18px;
-  padding-bottom: 15px;
-  padding-left: 55px;
+h4 {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.word {
-  margin: 0px;
-}
-
-.image {
+.buttons-div {
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
-.picture {
-  height: 25px;
-  margin: auto;
-  width: 25px;
-}
-
-.selection {
-  border-radius: 5px;
-  border: 2px solid #FFF;
+.activity-btn {
+  border-radius: 3px;
+  background-color: #46424D;
   color: #FFF;
-  height: 68px;
-  padding-top: 10px;
-  text-align: center;
-  width: 20%;
+  height: 50px;
+  width: 125px;
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 30px;
 }
 
-.form {
-width: 75%;
-display: flex;
-flex-wrap: wrap;
+#study {
+  background-image: url(./assets/study.svg);
 }
 
-.goal {
-  width: 99%;
-
+#meditate {
+  background-image: url(./assets/meditate.svg);
 }
 
-.time {
-  width: 50%;
+#exercise {
+  background-image: url(./assets/exercise.svg);
 }
 
-.input {
-  color: #FFF;
+.inputs {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
-.recent {
-  border: 2px solid white;
+label {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #FFF;
+  background-color: #46424D;
+  width: 400px;
+}
+
+#start-activity {
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  text-transform: uppercase;
+  width: 150px; 
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.right_side {
+  background-color: #46424D;
+  border-left: 2px solid grey;
   width: 33%;
+  /* border: 4px solid red; */
+  display: flex;
+  flex-grow: 1;
 }
 
-/* Main background: #2B2733
-Text on main background: #CBC9CF
-Header, cards: #46424D
-Card shadow: #26222D
-Text on header and cards: #FFF
-Study: #B3FD78
-Meditate: #C278FD
-Exercise: #FD8078
-Error: #EFB7EC */
+p {
+  color: #fff;
+}
