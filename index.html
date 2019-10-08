@@ -2,47 +2,39 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Intention Timer</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>Intention Timer</title>
   </head>
   <body>
     <header>
-      <h1>Intention timer</h1>
+      <h1>Intention Timer</h1>
     </header>
     <main>
-      <h2 class="subheader">New Activity</h2>
-      <section class="setup">
-        <h3 class="category">Select a category:</h3 >
-        <div class="image">
-          <div class="selection">
-            <img class="picture" src="assets/study.svg" alt="Select study category">
-            <p class="word">Study</p>
-          </div>
-          <div class="selection">
-            <img class="picture" src="assets/meditate.svg" alt="Select meditate category">
-            <p class="word">Meditate</p>
-          </div>
-          <div class="selection">
-          <img class="picture" src="assets/exercise.svg" alt="Select excercise category">
-          <p class="word">Exercise</p>
-          </div>
+      <h2>New Activity</h2>
+      <section class="left-section">
+        <h4>Select a category:</h4>
+        <div class="buttons-div">
+          <button class="activity-btn" id="study" type="button" name="button">Study</button>
+          <button class="activity-btn" id="meditate" type="button" name="button">Meditate</button>
+          <button class="activity-btn" id="exercise" type="button" name="button">Exercise</button>
         </div>
-        <section class="form">
-          <form action="index.html" method="post">
-            <h3 class="input">What would you like to accomplish during this time?</h3>
-            <input class="goal" type="text" name="" />
-            <h3 class="input">Minutes</h3>
-            <input class="time"type="text" name="" />
-            <h3 class="input">Seconds</h3>
-            <input class="time" type="text" name="" />
-            <input class ="submit" type="button" name="button" />
-          </form>
-        </section>
+        <section class="forms">
+          <form class="inputs" action="index.html" method="post">
+          <label for="input">What would you like to accompish during this time?</label>
+          <input type="text" name="" value="">
+          <label for="input">Minutes</label>
+          <input type="text" name="" value="">
+          <label for="input">Seconds</label>
+          <input type="text" name="" value="">
+          <button id="start-activity" type="button" name="button">Start Activity</button>
+        </form>
+      </section>
+      </section>
+      <section class="right_side">
+        <h2>Past Activity</h2>
+        <p>You haven't logged any activities yet. Complete the form to the left to get started!</p>
       </section>
     </main>
-    <section class="recent">
-      <p>You haven't logged any activities yet.</p>
-    </section>
   </body>
 </html>
