@@ -17,3 +17,27 @@ document.getElementById("exercise").addEventListener("click", function() {
   document.getElementById("exercise").style.borderColor = "#FD8078";
   document.getElementById("exercise").style.color = "#FD8078";
 });
+
+
+// on start activity click, hide .left-section and show .run-timer element
+
+document.querySelector('#start-activity').addEventListener("click", function() {
+        var leftSection = document.querySelector('.left-section');
+        var timerSection = document.querySelector('.run-timer');
+        leftSection.parentNode.replaceChild(timerSection, leftSection);
+});
+
+
+
+
+// If the Start Activity button is clicked before the user has entered
+// information into all four inputs, the user will receive an error message,
+//but will not lose any information that was provided.
+//
+// function validateForm() {
+//   var formComplete = document.querySelector[".inputs"].value;
+//   if (formComplete == "") {
+//     alert("Name must be filled out");
+//     return false;
+//   }
+// }
