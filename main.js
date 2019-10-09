@@ -19,13 +19,15 @@ document.getElementById("exercise").addEventListener("click", function() {
 });
 
 
+// on start activity click, hide .left-section and show .run-timer element
 
-// on start activity click, hide .left-section
+document.querySelector('#start-activity').addEventListener("click", function() {
+        var leftSection = document.querySelector('.left-section');
+        var timerSection = document.querySelector('.run-timer');
+        leftSection.parentNode.replaceChild(timerSection, leftSection);
+});
 
-  document.querySelector('#start-activity').addEventListener("click", function() {
-          var leftSection = document.querySelector('.left-section');
-          leftSection.style.display = "none";
-  });
+
 
 
 // If the Start Activity button is clicked before the user has entered
