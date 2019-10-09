@@ -1,5 +1,4 @@
 // Form functionality
-
 document.getElementById("study").addEventListener("click", function() {
   document.getElementById("study").style.backgroundImage = "url('assets/study-active.svg')";
   document.getElementById("study").style.borderColor = "#B3FD78";
@@ -18,9 +17,22 @@ document.getElementById("exercise").addEventListener("click", function() {
   document.getElementById("exercise").style.color = "#FD8078";
 });
 
+// Prevent letters in the minutes/seconds input fields:
+document.querySelector("#minutes").addEventListener("keypress", function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+});
+
+document.querySelector("#seconds").addEventListener("keypress", function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+});
 
 // on start activity click, hide .left-section and show .run-timer element
-
 document.querySelector('#start-activity').addEventListener("click", function() {
         var leftSection = document.querySelector('.left-section');
         var timerSection = document.querySelector('.run-timer');
@@ -46,6 +58,8 @@ function addTimerValues() {
   timeLeftSec.innerHTML = inputSec.value;
   placeHold.innerHTML = inputActivity.value;
 };
+
+
 
 
 
