@@ -27,7 +27,7 @@ h1 {
 
 main {
   background-color: #2B2733;
-  padding: 7px 25px 15px 28px;
+  padding: 7px 28px 15px 28px;
   width: 65%;
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +85,7 @@ h4 {
   font-size: 17px;
   height: 74px;
   width: 21%;
-  background-size: 20%;
+  background-size: 18%;
   background-repeat: no-repeat;
   background-position: top;
   padding-top: 30px;
@@ -94,13 +94,12 @@ h4 {
 .forms {
   display: flex;
   justify-content: center;
-  /* height: 1000px; */
+  /* height: 100px; */
   width: 100%;
 }
 
 .inputs {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -113,6 +112,10 @@ h4 {
 }
 
 .time {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-top: 39px;
   width: 50%;
 }
 
@@ -124,13 +127,22 @@ h4 {
   width: 86%;
 }
 
+.small-input {
+  border: none;
+  border-bottom: 2px solid #CBC9CF;
+  background-color: #46424D;
+  height: 20px;
+  width: 86%;
+}
+
 #start-activity {
   border-radius: 3px;
   background-color: #FFFFFF;
-  text-transform: uppercase;
-  width: 150px;
+  /* display: flex; */
+  width: 25%;
+  height:35px;
   margin-top: 15px;
-  padding: 5px;
+  text-align: center;
 }
 
 .right_side {
