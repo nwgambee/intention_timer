@@ -27,6 +27,19 @@ document.querySelector('#start-activity').addEventListener("click", function() {
         leftSection.parentNode.replaceChild(timerSection, leftSection);
 });
 
+var inputMin = document.querySelector('#minutes');
+var inputSec = document.querySelector('#seconds');
+var timeLeftMin = document.querySelector('.timer-minute');
+var timeLeftSec = document.querySelector('.timer-second');
+var startActivityBtn = document.querySelector('#start-activity');
+
+startActivityBtn.addEventListener("click", addTimerValues)
+
+function addTimerValues() {
+  timeLeftMin.innerHTML = inputMin.value;
+  timeLeftSec.innerHTML = inputSec.value;
+}
+
 
 
 
