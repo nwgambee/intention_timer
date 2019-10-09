@@ -37,8 +37,6 @@ document.querySelector('#start-activity').addEventListener("click", function() {
         var leftSection = document.querySelector('.left-section');
         var timerSection = document.querySelector('.run-timer');
         leftSection.parentNode.replaceChild(timerSection, leftSection);
-        var changeSubheader = document.querySelector('.left-subheader');
-        changeSubheader.innerText = 'Current Activity';
 });
 
 
@@ -57,10 +55,22 @@ function addTimerValues() {
   timeLeftMin.innerHTML = inputMin.value;
   timeLeftSec.innerHTML = inputSec.value;
   placeHold.innerHTML = inputActivity.value;
+  var changeSubheader = document.querySelector('.left-subheader');
+  changeSubheader.innerText = 'Current Activity';
 };
 
 
 
+// Error messages
+
+// startActivityBtn.addEventListener("click", inputError);
+// function inputError() {
+//   if (inputMin === "") {
+//   } else {
+//
+//  }
+//
+//
 
 
 
