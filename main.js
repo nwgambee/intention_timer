@@ -17,11 +17,3 @@ document.getElementById("exercise").addEventListener("click", function() {
   document.getElementById("exercise").style.borderColor = "#FD8078";
   document.getElementById("exercise").style.color = "#FD8078";
 });
-
-
-
-
-// document.getElementById("start-activity").addEventListener("click", function() {
-//       var minutes = document.querySelector('#minutes');
-//       console.log(minutes.innerHTML);
-// });
