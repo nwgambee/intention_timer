@@ -46,6 +46,7 @@ main {
   box-shadow: 8px 3px #26222D;
   background-color: #46424D;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 h4 {
@@ -111,11 +112,21 @@ h4 {
   width: 100%;
 }
 
-.time {
+.minute {
   display: flex;
   flex-wrap: wrap;
   padding-left: 100px;
-  padding-top: 39px;
+  padding-right: 53px;
+  padding-top: 50px;
+  width: 50%;
+}
+
+.second {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding-right: 30px;
+  padding-top: 50px;
   width: 50%;
 }
 
@@ -132,21 +143,25 @@ h4 {
   border-bottom: 2px solid #CBC9CF;
   background-color: #46424D;
   height: 20px;
-  width: 86%;
+  width: 79%;
 }
 
 .activity {
   display: flex;
+  justify-content: flex-end;
+  margin: 50px 115px 55px 0px;
+  width: 100%;
 }
 
 #start-activity {
   border-radius: 3px;
   background-color: #FFFFFF;
-  /* display: flex; */
-  width: 25%;
-  height:35px;
+  font-size: 18px;
+  width: 28%;
+  height: 40px;
   margin-top: 15px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .right_side {
