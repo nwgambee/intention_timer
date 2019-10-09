@@ -25,12 +25,18 @@ document.querySelector('#start-activity').addEventListener("click", function() {
         var leftSection = document.querySelector('.left-section');
         var timerSection = document.querySelector('.run-timer');
         leftSection.parentNode.replaceChild(timerSection, leftSection);
+        var changeSubheader = document.querySelector('.left-subheader');
+        changeSubheader.innerText = 'Current Activity';
 });
 
+
+// on click, replace timer values and activity value with values from input fields
 var inputMin = document.querySelector('#minutes');
 var inputSec = document.querySelector('#seconds');
 var timeLeftMin = document.querySelector('.timer-minute');
 var timeLeftSec = document.querySelector('.timer-second');
+var placeHold = document.querySelector('h3')
+var inputActivity = document.querySelector('.big-input')
 var startActivityBtn = document.querySelector('#start-activity');
 
 startActivityBtn.addEventListener("click", addTimerValues)
@@ -38,7 +44,8 @@ startActivityBtn.addEventListener("click", addTimerValues)
 function addTimerValues() {
   timeLeftMin.innerHTML = inputMin.value;
   timeLeftSec.innerHTML = inputSec.value;
-}
+  placeHold.innerHTML = inputActivity.value;
+};
 
 
 
