@@ -20,7 +20,6 @@ header {
 
 h1 {
   font-size: 23px;
-  margin-left: 18px;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
@@ -28,56 +27,40 @@ h1 {
 
 main {
   background-color: #2B2733;
-  padding-left: 20px;
-  padding-top: 15px;
-  margin: 0px;
-  width: 67%;
+  padding: 7px 25px 15px 28px;
+  width: 65%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-h2 {
+.left-subheader {
   color: #CBC9CF;
   margin-bottom: 11px;
-  margin-left: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
   width: 100%;
 }
 
 .left-section {
   border-radius: 5px;
-  margin-left: 5px;
+  box-shadow: 8px 3px #26222D;
   background-color: #46424D;
   width: 100%;
 }
 
 h4 {
   color: #fff;
-  font-size: 20px;
-  padding-top: 30px;
-  padding-left: 82px;
+  font-size: 18px;
 }
 
-.buttons-div {
-  display: flex;
-  justify-content: space-around;
-}
-
-.activity-btn {
-  border-radius: 3px;
-  background-color: #46424D;
-  color: #FFF;
-  height: 50px;
-  width: 125px;
-  background-size: 20%;
-  background-repeat: no-repeat;
-  background-position: top;
+.select {
   padding-top: 30px;
+  padding-left: 95px;
 }
 
 #study {
   background-image: url(./assets/study.svg);
+
 }
 
 #meditate {
@@ -88,24 +71,57 @@ h4 {
   background-image: url(./assets/exercise.svg);
 }
 
-.inputs {
+.buttons-div {
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
+  padding: 0px 49px 0px 49px;
 }
 
-label {
-  color: #fff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-input {
-  border: none;
-  border-bottom: 2px solid #FFF;
+.activity-btn {
+  border: 2px solid #FFF;
+  border-radius: 5px;
   background-color: #46424D;
-  width: 400px;
+  color: #FFF;
+  font-size: 17px;
+  height: 74px;
+  width: 21%;
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 30px;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  /* height: 1000px; */
+  width: 100%;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-top: 39px;
+  width: 100%;
+}
+
+.time {
+  width: 50%;
+}
+
+.big-input {
+  border: none;
+  border-bottom: 2px solid #CBC9CF;
+  background-color: #46424D;
+  height: 20px;
+  width: 86%;
 }
 
 #start-activity {
@@ -120,7 +136,7 @@ input {
 .right_side {
   background-color: #46424D;
   border-left: 2px solid grey;
-  width: 33%;
+  width: 35%;
   /* border: 4px solid red; */
   display: flex;
   /* flex-grow: 1; */
