@@ -59,7 +59,52 @@ function addTimerValues() {
   var changeSubheader = document.querySelector('.left-subheader');
   changeSubheader.innerText = 'Current Activity';
 };
+// Got timer to count backwards for seconds input and stop at 0 seconds in the console.
 
+var begin = document.querySelector(".timer-button");
+begin.addEventListener("click", countdown);
+
+function countdown() {
+  setInterval (timer, 1000)
+  var minLeft = inputMin.value;
+  var secLeft = inputSec.value;
+
+  function timer() {
+    console.log(parseInt(secLeft));
+    if (secLeft == 0 && minLeft == 0) {
+      alert("DONE!");
+      return;
+    };
+    parseInt(secLeft -=1);
+  };
+
+};
+
+// setInterval(timer, 1000)
+//     if (timeLeft === 0) {
+//       clearInterval(timer);
+//       alert(DONE);
+//       return;
+//     };
+/*
+
+Create a function called timer
+Set an interval for the function to run every second
+every time it runs it should subtract 1 from the seconds displayed
+every time the seconds reach 0 they should reset to 59
+every time the seconds reach 0 the function should subract 1 from the minutes
+when both equal 0 an alert should be displayed
+and the function should stop
+
+
+
+
+ */
+
+
+// };
+//
+//
 // function toggleTimer() {
 //   var toggle = document.querySelector('.hidden');
 //   if (toggle.style.display === "none") {
