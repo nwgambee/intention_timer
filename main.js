@@ -36,6 +36,7 @@ document.querySelector("#seconds").addEventListener("keypress", function (evt) {
 document.querySelector('#start-activity').addEventListener("click", function() {
         var leftSection = document.querySelector('.left-section');
         var timerSection = document.querySelector('.run-timer');
+        timerSection.classList.remove('hidden');
         leftSection.parentNode.replaceChild(timerSection, leftSection);
 });
 
@@ -59,7 +60,14 @@ function addTimerValues() {
   changeSubheader.innerText = 'Current Activity';
 };
 
-
+// function toggleTimer() {
+//   var toggle = document.querySelector('.hidden');
+//   if (toggle.style.display === "none") {
+//     toggle.style.display = "block";
+//   } else {
+//     toggle.style.display = "none";
+//   }
+// }
 
 // Error messages
 
