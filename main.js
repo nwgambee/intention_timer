@@ -53,14 +53,24 @@ var startActivityBtn = document.querySelector('#start-activity');
 startActivityBtn.addEventListener("click", addTimerValues)
 
 function addTimerValues() {
-  timeLeftMin.innerHTML = inputMin.value;
-  timeLeftSec.innerHTML = inputSec.value;
+  if (inputMin.value < 10) {
+    timeLeftMin.innerHTML = "0" + inputMin.value;
+  } else {
+    timeLeftMin.innerHTML = inputMin.value;
+  };
+  if (inputSec.value < 10) {
+    timeLeftSec.innerHTML = "0" + inputSec.value;
+  }
+  else {
+    timeLeftSec.innerHTML = inputSec.value;
+  };
+  // timeLeftSec.innerHTML = inputSec.value;
   placeHold.innerHTML = inputActivity.value;
   var changeSubheader = document.querySelector('.left-subheader');
   changeSubheader.innerText = 'Current Activity';
 };
-// Got timer to count backwards for seconds input and stop at 0 seconds in the console.
 
+// This allows users to start a timer by entering the desired minutes and seconds and clicking start.
 var begin = document.querySelector(".timer-button");
 begin.addEventListener("click", countdown);
 
@@ -71,6 +81,7 @@ function countdown() {
 
   function timer() {
     console.log(parseInt(secLeft));
+    // console.log(parseInt(minLeft));
     if (secLeft == 0 && minLeft == 0) {
       alert("DONE!");
       return;
@@ -82,26 +93,21 @@ function countdown() {
       secLeft = 59;
     }
 
-    // if (secLeft < 10)
-    //
-    // if (minLeft < 10)
-  };
+    if (parseInt(secLeft) < 10) {
+      timeLeftSec.innerHTML = "0" + parseInt(secLeft);
+    } else if (parseInt(secLeft) >= 10) {
+      timeLeftSec.innerHTML = parseInt(secLeft);
+    };
 
+    if (parseInt(minLeft) < 10) {
+      timeLeftMin.innerHTML = "0" + parseInt(minLeft);
+    } else if (parseInt(minLeft) >= 10) {
+      timeLeftMin.innerHTML = parseInt(minLeft);
+    };
+  };
 };
 
-/*
-Create a function called timer
-Set an interval for the function to run every second
-every time it runs it should subtract 1 from the seconds displayed
-every time the seconds reach 0 they should reset to 59
-every time the seconds reach 0 the function should subract 1 from the minutes
-when both equal 0 an alert should be displayed
-and the function should stop
 
-
-
-
- */
 
 
 // };
