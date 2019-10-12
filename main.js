@@ -71,27 +71,25 @@ function countdown() {
 
   function timer() {
     console.log(parseInt(secLeft));
-    if secLeft == 0 && minLeft == 0) {
+    if (secLeft == 0 && minLeft == 0) {
       alert("DONE!");
       return;
     };
     parseInt(secLeft -= 1);
 
-    if (secLeft == 0) {
+    if (secLeft < 0) {
       parseInt(minLeft -= 1);
+      secLeft = 59;
     }
+
+    // if (secLeft < 10)
+    //
+    // if (minLeft < 10)
   };
 
 };
 
-// setInterval(timer, 1000)
-//     if (timeLeft === 0) {
-//       clearInterval(timer);
-//       alert(DONE);
-//       return;
-//     };
 /*
-
 Create a function called timer
 Set an interval for the function to run every second
 every time it runs it should subtract 1 from the seconds displayed
