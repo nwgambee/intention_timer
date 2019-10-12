@@ -71,11 +71,15 @@ function countdown() {
 
   function timer() {
     console.log(parseInt(secLeft));
-    if (secLeft == 0 && minLeft == 0) {
+    if secLeft == 0 && minLeft == 0) {
       alert("DONE!");
       return;
     };
-    parseInt(secLeft -=1);
+    parseInt(secLeft -= 1);
+
+    if (secLeft == 0) {
+      parseInt(minLeft -= 1);
+    }
   };
 
 };
