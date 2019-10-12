@@ -80,10 +80,8 @@ function countdown() {
   var secLeft = inputSec.value;
 
   function timer() {
-    console.log(parseInt(secLeft));
-    // console.log(parseInt(minLeft));
     if (secLeft == 0 && minLeft == 0) {
-      alert("DONE!");
+      alert("DONE ZO!");
       return;
     };
     parseInt(secLeft -= 1);
@@ -91,13 +89,15 @@ function countdown() {
     if (secLeft < 0) {
       parseInt(minLeft -= 1);
       secLeft = 59;
-    }
+    };
 
     if (parseInt(secLeft) < 10) {
       timeLeftSec.innerHTML = "0" + parseInt(secLeft);
     } else if (parseInt(secLeft) >= 10) {
       timeLeftSec.innerHTML = parseInt(secLeft);
-    };
+    } else if (parseInt(secLeft) === 0) {
+      timeLeftSec.innerHTML = "00";
+     };
 
     if (parseInt(minLeft) < 10) {
       timeLeftMin.innerHTML = "0" + parseInt(minLeft);
