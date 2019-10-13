@@ -61,13 +61,50 @@ document.querySelector("#seconds").addEventListener("keypress", function (evt) {
     }
 });
 
-// on start activity click, hide .left-section and show .run-timer element
-document.querySelector('#start-activity').addEventListener("click", function() {
-        var leftSection = document.querySelector('.left-section');
-        var timerSection = document.querySelector('.run-timer');
+// on start activity click, hide .left-section and show .run-timer element as long as all four fields are valid
+var descriptionForm = document.querySelector(".big-input");
+document.querySelector('#start-activity').addEventListener("click", formValidation);
+
+  function formValidation() {
+    var studyBtnClicked = studyBtn.classList.contains("study-active");
+    var meditateBtnClicked = meditateBtn.classList.contains("meditate-active");
+    var exerciseBtnClicked = exerciseBtn.classList.contains("exercise-active");
+
+    if (descriptionForm.value === "") {
+      // unhide error message under description
+      console.log("add description");
+  };
+    if (inputMin.value === "") {
+      // unhide error message under minute form
+      console.log("add minutes");
+  };
+    if (inputSec.value ==="") {
+      // unhide error message under second form
+      console.log("add seconds");
+  };
+    if (!studyBtnClicked && !meditateBtnClicked && !exerciseBtnClicked) {
+      //unhide error message under buttons
+      console.log("select category");
+  };
+    if (descriptionForm.value != "" && inputSec.value != "" && inputMin.value != "" && (studyBtnClicked || meditateBtnClicked || exerciseBtnClicked)) {
+      switchToTimer();
+      addTimerValues();
+    };
+};
+
+// document.querySelector('#start-activity').addEventListener("click", switchToTimer);
+
+function switchToTimer() {
+    var leftSection = document.querySelector('.left-section');
+    var timerSection = document.querySelector('.run-timer');
         timerSection.classList.remove('hidden');
         leftSection.parentNode.replaceChild(timerSection, leftSection);
-});
+};
+
+
+
+
+// don't allow switch to timerSection unless all 4 forms are filled
 
 
 // on click, replace timer values and activity value with values from input fields
@@ -79,7 +116,6 @@ var placeHold = document.querySelector('h3')
 var inputActivity = document.querySelector('.big-input')
 var startActivityBtn = document.querySelector('#start-activity');
 
-startActivityBtn.addEventListener("click", addTimerValues)
 
 function addTimerValues() {
   if (inputMin.value < 10) {
