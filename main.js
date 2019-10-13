@@ -114,7 +114,7 @@ function countdown() {
     // console.log('secLeft', secLeft);
     // console.log('minLeft', minLeft);
     if (secLeft == 0 && minLeft == 0) {
-      alert("DONE ZO!");
+      timerButton.innerHTML = "DONE-ZO";
       return;
     };
     secLeft -= 1;
