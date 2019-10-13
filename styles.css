@@ -292,6 +292,10 @@ h3 {
   width: 235px;
 }
 
+.timer-button:focus {
+  outline: 0;
+}
+
 .hidden {
   display: none;
 }
