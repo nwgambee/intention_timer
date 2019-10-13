@@ -106,11 +106,13 @@ var begin = document.querySelector(".timer-button");
 begin.addEventListener("click", countdown);
 
 function countdown() {
-  setInterval (timer, 1000)
-  var minLeft = parseInt(inputMin.value);
-  var secLeft = parseInt(inputSec.value);
 
+  var minLeft = parseInt(inputMin.value) || 0;
+  var secLeft = parseInt(inputSec.value) || 0;
+  setInterval (timer, 1000)
   function timer() {
+    // console.log('secLeft', secLeft);
+    // console.log('minLeft', minLeft);
     if (secLeft == 0 && minLeft == 0) {
       alert("DONE ZO!");
       return;
