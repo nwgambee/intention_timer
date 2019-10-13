@@ -299,3 +299,22 @@ h3 {
 .hidden {
   display: none;
 }
+
+
+.error-message {
+  color: #EFB7EC;
+
+}
+
+#error-category {
+  margin-left: 115px;
+}
+
+.hidden-warning {
+  display: none;
+}
+
+#warning-icon {
+    height: 15px;
+    margin-right: 8px;
+}

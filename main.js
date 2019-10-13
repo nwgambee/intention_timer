@@ -69,22 +69,22 @@ document.querySelector('#start-activity').addEventListener("click", formValidati
     var studyBtnClicked = studyBtn.classList.contains("study-active");
     var meditateBtnClicked = meditateBtn.classList.contains("meditate-active");
     var exerciseBtnClicked = exerciseBtn.classList.contains("exercise-active");
+    var errorCat = document.querySelector("#error-category");
+    var errorDesc = document.querySelector("#error-description");
+    var errorMin = document.querySelector("#error-minutes");
+    var errorSec = document.querySelector("#error-seconds");
 
     if (descriptionForm.value === "") {
-      // unhide error message under description
-      console.log("add description");
+      errorDesc.classList.remove("hidden-warning");
   };
     if (inputMin.value === "") {
-      // unhide error message under minute form
-      console.log("add minutes");
+      errorMin.classList.remove("hidden-warning");
   };
     if (inputSec.value ==="") {
-      // unhide error message under second form
-      console.log("add seconds");
+      errorSec.classList.remove("hidden-warning");
   };
     if (!studyBtnClicked && !meditateBtnClicked && !exerciseBtnClicked) {
-      //unhide error message under buttons
-      console.log("select category");
+        errorCat.classList.remove("hidden-warning");
   };
     if (descriptionForm.value != "" && inputSec.value != "" && inputMin.value != "" && (studyBtnClicked || meditateBtnClicked || exerciseBtnClicked)) {
       switchToTimer();

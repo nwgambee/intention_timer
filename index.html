@@ -19,19 +19,23 @@
           <button class="meditate-default" id="meditate" type="button" name="button">Meditate</button>
           <button class="exercise-default" id="exercise" type="button" name="button">Exercise</button>
         </div>
+        <p class="error-message hidden-warning" id="error-category"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">Please select a category.</p>
         <section class="forms">
           <form class="inputs" action="index.html" method="post">
             <div class="info">
               <h4>What would you like to accompish during this time?</h4>
               <input class="big-input" type="text" name="" value="" />
+              <p class="error-message hidden-warning" id="error-description"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">A description is required.</p>
             </div>
             <div class="minute">
               <h4>Minutes</h4>
               <input class ="small-input" id="minutes" type="text" name="" value="">
+              <p class="error-message hidden-warning" id="error-minutes"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">Please enter an amount of minutes.</p>
             </div>
             <div class="second">
               <h4>Seconds</h4>
               <input class ="small-input" id="seconds" type="text" name="" value="">
+              <p class="error-message hidden-warning" id="error-seconds"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">Please enter an amount of seconds.</p>
             </div>
             <div class="activity">
             <button id="start-activity" type="button" name="button">Start Activity</button>
