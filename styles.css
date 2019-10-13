@@ -61,27 +61,9 @@ h4 {
   padding-top: 30px;
 }
 
-#study {
-  background-image: url(./assets/study.svg);
-
-}
-
-#meditate {
-  background-image: url(./assets/meditate.svg);
-}
-
-#exercise {
-  background-image: url(./assets/exercise.svg);
-}
-
-.buttons-div {
-  display: flex;
-  justify-content: space-around;
-  padding: 0px 6% 0px 6%;
-}
-
-.activity-btn {
+.study-default {
   background-color: #46424D;
+  background-image: url(./assets/study.svg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: 18%;
@@ -92,6 +74,87 @@ h4 {
   height: 74px;
   padding-top: 30px;
   width: 21%;
+}
+
+.study-active {
+  background-image: url(./assets/study-active.svg);
+  background-color: #46424D;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 18%;
+  border: 2px solid #B3FD78;
+  border-radius: 5px;
+  color: #B3FD78;
+  font-size: 17px;
+  height: 74px;
+  padding-top: 30px;
+  width: 21%;
+}
+
+.meditate-default {
+  background-color: #46424D;
+  background-image: url(./assets/meditate.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 18%;
+  border: 2px solid #FFF;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 17px;
+  height: 74px;
+  padding-top: 30px;
+  width: 21%;
+}
+
+.meditate-active {
+  background-image: url(./assets/meditate-active.svg);
+  background-color: #46424D;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 18%;
+  border: 2px solid #C278FD;
+  border-radius: 5px;
+  color: #C278FD;
+  font-size: 17px;
+  height: 74px;
+  padding-top: 30px;
+  width: 21%;
+}
+
+.exercise-default {
+  background-color: #46424D;
+  background-image: url(./assets/exercise.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 18%;
+  border: 2px solid #FFF;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 17px;
+  height: 74px;
+  padding-top: 30px;
+  width: 21%;
+}
+
+.exercise-active {
+  background-image: url(./assets/exercise-active.svg);
+  background-color: #46424D;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 18%;
+  border: 2px solid #FD8078;
+  border-radius: 5px;
+  color: #FD8078;
+  font-size: 17px;
+  height: 74px;
+  padding-top: 30px;
+  width: 21%;
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 6% 0px 6%;
 }
 
 .forms {

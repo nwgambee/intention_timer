@@ -1,20 +1,49 @@
-// Form functionality
-document.getElementById("study").addEventListener("click", function() {
-  document.getElementById("study").style.backgroundImage = "url('assets/study-active.svg')";
-  document.getElementById("study").style.borderColor = "#B3FD78";
-  document.getElementById("study").style.color = "#B3FD78";
+// Select only one activity button at a time and make "start timer" button border color
+// match selected activity button color
+var studyBtn = document.querySelector("#study");
+
+studyBtn.addEventListener("click", function() {
+    studyBtn.classList.remove("study-default");
+    studyBtn.classList.add("study-active");
+    meditateBtn.classList.remove("meditate-active");
+    meditateBtn.classList.add("meditate-default");
+    exerciseBtn.classList.remove("exercise-active");
+    exerciseBtn.classList.add("exercise-default");
 });
 
-document.getElementById("meditate").addEventListener("click", function() {
-  document.getElementById("meditate").style.backgroundImage = "url('assets/meditate-active.svg')";
-  document.getElementById("meditate").style.borderColor = "#C278FD";
-  document.getElementById("meditate").style.color = "#C278FD";
+var meditateBtn = document.querySelector("#meditate");
+
+meditateBtn.addEventListener("click", function() {
+  meditateBtn.classList.remove("meditate-default");
+  meditateBtn.classList.add("meditate-active");
+  studyBtn.classList.remove("study-active");
+  studyBtn.classList.add("study-default");
+  exerciseBtn.classList.remove("exercise-active");
+  exerciseBtn.classList.add("exercise-default");
 });
 
-document.getElementById("exercise").addEventListener("click", function() {
-  document.getElementById("exercise").style.backgroundImage = "url('assets/exercise-active.svg')";
-  document.getElementById("exercise").style.borderColor = "#FD8078";
-  document.getElementById("exercise").style.color = "#FD8078";
+var exerciseBtn = document.querySelector("#exercise");
+
+exerciseBtn.addEventListener("click", function() {
+  exerciseBtn.classList.remove("exercise-default");
+  exerciseBtn.classList.add("exercise-active");
+  meditateBtn.classList.remove("meditate-active");
+  meditateBtn.classList.add("meditate-default");
+  studyBtn.classList.remove("study-active");
+  studyBtn.classList.add("study-default");
+});
+
+
+var timerButton = document.querySelector(".timer-button");
+
+document.querySelector('#start-activity').addEventListener("click", function() {
+  if (studyBtn.classList.contains("study-active")) {
+    timerButton.style.borderColor = "#B3FD78";
+  } else if (meditateBtn.classList.contains("meditate-active")) {
+    timerButton.style.borderColor = "#C278FD";
+  } else if (exerciseBtn.classList.contains("exercise-active")) {
+    timerButton.style.borderColor = "#FD8078";
+  };
 });
 
 // Prevent letters in the minutes/seconds input fields:
@@ -107,42 +136,50 @@ function countdown() {
   };
 };
 
+// Select only one activity button at a time and make "start timer" button border color
+// match selected activity button color
+var studyBtn = document.querySelector("#study");
+
+studyBtn.addEventListener("click", function() {
+    studyBtn.classList.remove("study-default");
+    studyBtn.classList.add("study-active");
+    meditateBtn.classList.remove("meditate-active");
+    meditateBtn.classList.add("meditate-default");
+    exerciseBtn.classList.remove("exercise-active");
+    exerciseBtn.classList.add("exercise-default");
+});
+
+var meditateBtn = document.querySelector("#meditate");
+
+meditateBtn.addEventListener("click", function() {
+  meditateBtn.classList.remove("meditate-default");
+  meditateBtn.classList.add("meditate-active");
+  studyBtn.classList.remove("study-active");
+  studyBtn.classList.add("study-default");
+  exerciseBtn.classList.remove("exercise-active");
+  exerciseBtn.classList.add("exercise-default");
+});
+
+var exerciseBtn = document.querySelector("#exercise");
+
+exerciseBtn.addEventListener("click", function() {
+  exerciseBtn.classList.remove("exercise-default");
+  exerciseBtn.classList.add("exercise-active");
+  meditateBtn.classList.remove("meditate-active");
+  meditateBtn.classList.add("meditate-default");
+  studyBtn.classList.remove("study-active");
+  studyBtn.classList.add("study-default");
+});
 
 
+var timerButton = document.querySelector(".timer-button");
 
-// };
-//
-//
-// function toggleTimer() {
-//   var toggle = document.querySelector('.hidden');
-//   if (toggle.style.display === "none") {
-//     toggle.style.display = "block";
-//   } else {
-//     toggle.style.display = "none";
-//   }
-// }
-
-// Error messages
-
-// startActivityBtn.addEventListener("click", inputError);
-// function inputError() {
-//   if (inputMin === "") {
-//   } else {
-//
-//  }
-//
-//
-
-
-
-// If the Start Activity button is clicked before the user has entered
-// information into all four inputs, the user will receive an error message,
-//but will not lose any information that was provided.
-//
-// function validateForm() {
-//   var formComplete = document.querySelector[".inputs"].value;
-//   if (formComplete == "") {
-//     alert("Name must be filled out");
-//     return false;
-//   }
-// }
+document.querySelector('#start-activity').addEventListener("click", function() {
+  if (studyBtn.classList.contains("study-active")) {
+    timerButton.style.borderColor = "#B3FD78";
+  } else if (meditateBtn.classList.contains("meditate-active")) {
+    timerButton.style.borderColor = "#C278FD";
+  } else if (exerciseBtn.classList.contains("exercise-active")) {
+    timerButton.style.borderColor = "#FD8078";
+  };
+});
