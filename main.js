@@ -86,13 +86,15 @@ function addTimerValues() {
     timeLeftMin.innerHTML = "0" + inputMin.value;
   } else {
     timeLeftMin.innerHTML = inputMin.value;
-  };
-  if (inputSec.value < 10) {
+  }
+  if (inputSec.value === "") {
+    timeLeftSec.innerHTML = "00";
+  }  else if (inputSec.value < 10) {
     timeLeftSec.innerHTML = "0" + inputSec.value;
   }
   else {
     timeLeftSec.innerHTML = inputSec.value;
-  };
+  }
   // timeLeftSec.innerHTML = inputSec.value;
   placeHold.innerHTML = inputActivity.value;
   var changeSubheader = document.querySelector('.left-subheader');
