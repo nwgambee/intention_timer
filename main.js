@@ -176,6 +176,30 @@ function countdown() {
   };
 };
 
+// Make button log activities
+var logActivity = document.querySelector('.log');
+var replace = document.querySelector('.default-message');
+logActivity.addEventListener('click', log)
+function log() {
+  console.log(log);
+  replace.classList.add("hidden");
+//   var button = document.createElement('p');
+// 
+//
+//
+// var para = document.createElement("p");
+// var node = document.createTextNode("This is new.");
+// para.appendChild(node);
+//
+// var element = document.getElementById("div1");
+// var child = document.getElementById("p1");
+// element.insertBefore(para, child);
+// </script>
+}
+
+
+
+
 // Select only one activity button at a time and make "start timer" button border color
 // match selected activity button color
 var studyBtn = document.querySelector("#study");
