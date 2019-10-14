@@ -176,6 +176,17 @@ function countdown() {
   };
 };
 
+// Make button log activities
+var logActivity = document.querySelector('.log');
+logActivity.addEventListener('click', log)
+function log() {
+  console.log(log);
+  
+}
+
+
+
+
 // Select only one activity button at a time and make "start timer" button border color
 // match selected activity button color
 var studyBtn = document.querySelector("#study");

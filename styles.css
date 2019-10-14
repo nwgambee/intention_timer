@@ -314,6 +314,13 @@ h3 {
   display: none;
 }
 
+.log {
+  font-size: 18px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  /* width: 100px; */
+}
+
 #warning-icon {
     height: 15px;
     margin-right: 8px;
