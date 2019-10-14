@@ -182,8 +182,19 @@ var replace = document.querySelector('.default-message');
 logActivity.addEventListener('click', log)
 function log() {
   console.log(log);
-  replace.innerHTML = iefaje;
-
+  replace.classList.add("hidden");
+//   var button = document.createElement('p');
+// 
+//
+//
+// var para = document.createElement("p");
+// var node = document.createTextNode("This is new.");
+// para.appendChild(node);
+//
+// var element = document.getElementById("div1");
+// var child = document.getElementById("p1");
+// element.insertBefore(para, child);
+// </script>
 }
 
 
