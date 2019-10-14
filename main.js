@@ -178,10 +178,12 @@ function countdown() {
 
 // Make button log activities
 var logActivity = document.querySelector('.log');
+var replace = document.querySelector('.default-message');
 logActivity.addEventListener('click', log)
 function log() {
   console.log(log);
-  
+  replace.innerHTML = iefaje;
+
 }
 
 
