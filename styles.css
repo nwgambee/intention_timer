@@ -172,6 +172,7 @@ h4 {
 .info {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   padding-left: 11%;
   padding-top: 39px;
   width: 100%;
@@ -179,6 +180,7 @@ h4 {
 
 .minute {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-left: 11%;
   padding-top: 50px;
@@ -187,6 +189,7 @@ h4 {
 
 .second {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-left: 8%;
   padding-right: 4%;
