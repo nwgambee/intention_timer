@@ -263,12 +263,7 @@ h4 {
   display: flex;
   margin: auto;
   flex-direction: column;
-  padding-bottom: 57%;
-  margin-top: 5px;
-  margin-bottom: 50px;
-  padding-bottom: 53%;
   width: 100%;
-}
 }
 
 h3 {
@@ -289,7 +284,7 @@ h3 {
   border: 4px solid #FFF;
   border-radius: 100%;
   color: #FFF;
-  font-size: 27px;
+  font-size: 26px;
   height: 250px;
   margin-bottom: 150px;
   margin-top: -50px;
