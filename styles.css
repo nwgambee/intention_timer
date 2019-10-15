@@ -7,8 +7,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -24,31 +24,28 @@ h1 {
   padding-top: 8px;
   text-transform: uppercase;
   text-align: center;
-  width: 100%;
 }
 
 main {
   background-color: #2B2733;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   padding: 7px 2% 15px 2%;
   width: 65%;
 }
 
 .left-subheader {
   color: #CBC9CF;
-  margin-bottom: 11px;
-  padding-bottom: 3px;
-  width: 100%;
 }
 
 .left-section {
   background-color: #46424D;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 8px 3px #26222D;
-  margin-bottom: 18px;
-  padding-bottom: 1px;
+  padding-bottom: 57%;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  padding-bottom: 55%;
   width: 100%;
 }
 
@@ -259,9 +256,9 @@ h4 {
 }
 
 .run-timer {
-  /* display: none; */
   align-items: center;
   background-color: #46424D;
+  border-radius: 8px;
   box-shadow: 8px 3px #26222D;
   display: flex;
   margin: auto;
@@ -277,7 +274,6 @@ h3 {
 
 .all-timer {
   color: #FFF;
-  /* dispaly: inline-block; */
   font-size: 90px;
   font-weight: 400;
   margin-top: -30px;
