@@ -361,3 +361,7 @@ h3 {
   height: 23px;
   width: 5px;
 }
+
+.hide-card {
+  display: none;
+}

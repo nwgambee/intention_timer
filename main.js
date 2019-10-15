@@ -1,265 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Select only one activity button at a time and make "start timer" button border color
 // match selected activity button color
 // This is the script for the left side of the main page
@@ -443,6 +182,7 @@ function countdown() {
   };
 };
 
+<<<<<<< HEAD
 // Make button log activities
 var logActivity = document.querySelector('.log');
 var replace = document.querySelector('.default-message');
@@ -467,6 +207,8 @@ function log() {
 
 
 
+=======
+>>>>>>> 01476aa55caceaa01fa965120ec8eb0b981a5dae
 // Select only one activity button at a time and make "start timer" button border color
 // match selected activity button color
 var studyBtn = document.querySelector("#study");
@@ -514,3 +256,36 @@ document.querySelector('#start-activity').addEventListener("click", function() {
     timerButton.style.borderColor = "#FD8078";
   };
 });
+
+// on log activity button click, replace right side p-text with card
+var logActivity = document.querySelector('.log');
+
+logActivity.addEventListener('click', function (event) {
+  console.log(event);
+  var rightSidePH = document.querySelector(".default-message");
+  rightSidePH.style.display = "none";
+  var card = document.querySelector(".card");
+  card.classList.remove("hide-card");
+  var cardCategory = document.querySelector(".reason");
+  // cardCategory.innerHTML = selected category
+  var cardColor = document.querySelector(".indicator");
+  if (studyBtn.classList.contains("study-active")) {
+    cardColor.style.backgroundColor = "#B3FD78";
+  } else if (meditateBtn.classList.contains("meditate-active")) {
+    cardColor.style.backgroundColor = "#C278FD";
+  } else if (exerciseBtn.classList.contains("exercise-active")) {
+    cardColor.style.backgroundColor = "#FD8078"; };
+  var cardTime = document.querySelector(".time");
+  cardTime.innerHTML = `${inputMin}:${inputSec}`;
+  var cardDescription = document.querySelector(".userInput");
+  cardDescription.innerHTML = inputActivity.value;
+
+});
+
+class Cards {
+  constructor(category, color, minutes, seconds, description) {
+    this.minutes = minutes;
+    this.category = category;
+    this.description = description;
+  }
+}
