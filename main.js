@@ -105,8 +105,6 @@ function switchToTimer() {
 
 
 // don't allow switch to timerSection unless all 4 forms are filled
-
-
 // on click, replace timer values and activity value with values from input fields
 var inputMin = document.querySelector('#minutes');
 var inputSec = document.querySelector('#seconds');
