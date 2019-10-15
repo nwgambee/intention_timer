@@ -1,44 +1,52 @@
-
 // Select only one activity button at a time and make "start timer" button border color
 // match selected activity button color
-// This is the script for the left side of the main page
-var initialInput = document.querySelector(".left-section");
-var hiddenTimer = document.querySelector(".run-timer");
+var studyBtn = document.querySelector("#study");
 
-initialInput.addEventListener('click', buttonToggle);
-function buttonToggle (event) {
-  // console.log(event);
-  if (event.target.className === "study-default") {
+studyBtn.addEventListener("click", function() {
     studyBtn.classList.remove("study-default");
     studyBtn.classList.add("study-active");
     meditateBtn.classList.remove("meditate-active");
     meditateBtn.classList.add("meditate-default");
     exerciseBtn.classList.remove("exercise-active");
     exerciseBtn.classList.add("exercise-default");
-  } if (event.target.className === "meditate-default") {
-    meditateBtn.classList.remove("meditate-default");
-    meditateBtn.classList.add("meditate-active");
-    studyBtn.classList.remove("study-active");
-    studyBtn.classList.add("study-default");
-    exerciseBtn.classList.remove("exercise-active");
-    exerciseBtn.classList.add("exercise-default");
-  } if (event.target.classname === "exercise.default") {
-    exerciseBtn.classList.remove("exercise-default");
-    exerciseBtn.classList.add("exercise-active");
-    meditateBtn.classList.remove("meditate-active");
-    meditateBtn.classList.add("meditate-default");
-    studyBtn.classList.remove("study-active");
-    studyBtn.classList.add("study-default");
+});
+
+var meditateBtn = document.querySelector("#meditate");
+
+meditateBtn.addEventListener("click", function() {
+  meditateBtn.classList.remove("meditate-default");
+  meditateBtn.classList.add("meditate-active");
+  studyBtn.classList.remove("study-active");
+  studyBtn.classList.add("study-default");
+  exerciseBtn.classList.remove("exercise-active");
+  exerciseBtn.classList.add("exercise-default");
+});
+
+var exerciseBtn = document.querySelector("#exercise");
+
+exerciseBtn.addEventListener("click", function() {
+  exerciseBtn.classList.remove("exercise-default");
+  exerciseBtn.classList.add("exercise-active");
+  meditateBtn.classList.remove("meditate-active");
+  meditateBtn.classList.add("meditate-default");
+  studyBtn.classList.remove("study-active");
+  studyBtn.classList.add("study-default");
+});
+
+
+var timerButton = document.querySelector(".timer-button");
+
+document.querySelector('#start-activity').addEventListener("click", function() {
+  if (studyBtn.classList.contains("study-active")) {
+    timerButton.style.borderColor = "#B3FD78";
+  } else if (meditateBtn.classList.contains("meditate-active")) {
+    timerButton.style.borderColor = "#C278FD";
+  } else if (exerciseBtn.classList.contains("exercise-active")) {
+    timerButton.style.borderColor = "#FD8078";
   };
-};
+});
 
 // Prevent letters in the minutes/seconds input fields:
-initialInput.addEventListener("keypress", noLetters);
-
-function noLetters(event) {
-  console.log(event);
-}
-
 document.querySelector("#minutes").addEventListener("keypress", function (evt) {
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
     {
@@ -52,23 +60,6 @@ document.querySelector("#seconds").addEventListener("keypress", function (evt) {
         evt.preventDefault();
     }
 });
-
-
-
-
-// This is the script for the hidden timer page
-hiddenTimer.addEventListener('click', startTimer);
-
-function startTimer (event) {
-  if (studyBtn.classList.contains("study-active")) {
-    timerButton.style.borderColor = "#B3FD78";
-  } else if (meditateBtn.classList.contains("meditate-active")) {
-    timerButton.style.borderColor = "#C278FD";
-  } else if (exerciseBtn.classList.contains("exercise-active")) {
-    timerButton.style.borderColor = "#FD8078";
-  };
-};
-
 
 // on start activity click, hide .left-section and show .run-timer element as long as all four fields are valid
 var descriptionForm = document.querySelector(".big-input");
@@ -149,10 +140,13 @@ var begin = document.querySelector(".timer-button");
 begin.addEventListener("click", countdown);
 
 function countdown() {
+
   var minLeft = parseInt(inputMin.value) || 0;
   var secLeft = parseInt(inputSec.value) || 0;
   setInterval (timer, 1000)
   function timer() {
+    // console.log('secLeft', secLeft);
+    // console.log('minLeft', minLeft);
     if (secLeft == 0 && minLeft == 0) {
       timerButton.innerHTML = "DONE-ZO";
       return;
@@ -180,33 +174,6 @@ function countdown() {
   };
 };
 
-<<<<<<< HEAD
-// Make button log activities
-var logActivity = document.querySelector('.log');
-var replace = document.querySelector('.default-message');
-logActivity.addEventListener('click', log)
-function log() {
-  console.log(log);
-  replace.classList.add("hidden");
-//   var button = document.createElement('p');
-//
-//
-//
-// var para = document.createElement("p");
-// var node = document.createTextNode("This is new.");
-// para.appendChild(node);
-//
-// var element = document.getElementById("div1");
-// var child = document.getElementById("p1");
-// element.insertBefore(para, child);
-// </script>
-}
-
-
-
-
-=======
->>>>>>> 01476aa55caceaa01fa965120ec8eb0b981a5dae
 // Select only one activity button at a time and make "start timer" button border color
 // match selected activity button color
 var studyBtn = document.querySelector("#study");
