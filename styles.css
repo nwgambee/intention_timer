@@ -263,7 +263,12 @@ h4 {
   display: flex;
   margin: auto;
   flex-direction: column;
+  padding-bottom: 57%;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  padding-bottom: 53%;
   width: 100%;
+}
 }
 
 h3 {
