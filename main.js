@@ -238,12 +238,15 @@ logActivity.addEventListener('click', function (event) {
   var cardColor = document.querySelector(".indicator");
   if (studyBtn.classList.contains("study-active")) {
     cardColor.style.backgroundColor = "#B3FD78";
+    cardCategory.innerHTML = "Study";
   } else if (meditateBtn.classList.contains("meditate-active")) {
     cardColor.style.backgroundColor = "#C278FD";
+    cardCategory.innerHTML = "Meditate";
   } else if (exerciseBtn.classList.contains("exercise-active")) {
     cardColor.style.backgroundColor = "#FD8078"; };
+    cardCategory.innerHTML = "Exercise";
   var cardTime = document.querySelector(".time");
-  cardTime.innerHTML = `${inputMin}:${inputSec}`;
+  cardTime.innerHTML = `${timeLeftMin.innerHTML} MIN ${timeLeftSec.innerHTML} SECONDS`;
   var cardDescription = document.querySelector(".userInput");
   cardDescription.innerHTML = inputActivity.value;
 
