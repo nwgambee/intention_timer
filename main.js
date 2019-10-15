@@ -250,10 +250,11 @@ logActivity.addEventListener('click', function (event) {
 
 });
 
+
 class Cards {
   constructor(category, color, minutes, seconds, description) {
     this.minutes = minutes;
     this.category = category;
     this.description = description;
   }
-}
+};
