@@ -1,5 +1,4 @@
-// Select only one activity button at a time and make "start timer" button border color
-// match selected activity button color
+// Select only one activity button at a time:
 var studyBtn = document.querySelector("#study");
 
 studyBtn.addEventListener("click", function() {
@@ -33,7 +32,7 @@ exerciseBtn.addEventListener("click", function() {
   studyBtn.classList.add("study-default");
 });
 
-
+// make start timer button border color match selected category
 var timerButton = document.querySelector(".timer-button");
 
 document.querySelector('#start-activity').addEventListener("click", function() {
@@ -48,61 +47,54 @@ document.querySelector('#start-activity').addEventListener("click", function() {
 
 // Prevent letters in the minutes/seconds input fields:
 document.querySelector("#minutes").addEventListener("keypress", function (evt) {
-    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
-    {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
         evt.preventDefault();
     }
 });
 
 document.querySelector("#seconds").addEventListener("keypress", function (evt) {
-    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
-    {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
         evt.preventDefault();
     }
 });
 
 // on start activity click, hide .left-section and show .run-timer element as long as all four fields are valid
-var descriptionForm = document.querySelector(".big-input");
 document.querySelector('#start-activity').addEventListener("click", formValidation);
 
-  function formValidation() {
-    var studyBtnClicked = studyBtn.classList.contains("study-active");
-    var meditateBtnClicked = meditateBtn.classList.contains("meditate-active");
-    var exerciseBtnClicked = exerciseBtn.classList.contains("exercise-active");
-    var errorCat = document.querySelector("#error-category");
-    var errorDesc = document.querySelector("#error-description");
-    var errorMin = document.querySelector("#error-minutes");
-    var errorSec = document.querySelector("#error-seconds");
+function formValidation() {
+  var studyBtnClicked = studyBtn.classList.contains("study-active");
+  var meditateBtnClicked = meditateBtn.classList.contains("meditate-active");
+  var exerciseBtnClicked = exerciseBtn.classList.contains("exercise-active");
+  var errorCat = document.querySelector("#error-category");
+  var errorDesc = document.querySelector("#error-description");
+  var errorMin = document.querySelector("#error-minutes");
+  var errorSec = document.querySelector("#error-seconds");
+  var descriptionForm = document.querySelector(".big-input");
 
-    if (descriptionForm.value === "") {
+  if (descriptionForm.value === "") {
       errorDesc.classList.remove("hidden-warning");
   };
-    if (inputMin.value === "") {
+  if (inputMin.value === "") {
       errorMin.classList.remove("hidden-warning");
   };
-    if (inputSec.value ==="") {
+  if (inputSec.value ==="") {
       errorSec.classList.remove("hidden-warning");
   };
-    if (!studyBtnClicked && !meditateBtnClicked && !exerciseBtnClicked) {
+  if (!studyBtnClicked && !meditateBtnClicked && !exerciseBtnClicked) {
         errorCat.classList.remove("hidden-warning");
   };
-    if (descriptionForm.value != "" && inputSec.value != "" && inputMin.value != "" && (studyBtnClicked || meditateBtnClicked || exerciseBtnClicked)) {
+  if (descriptionForm.value != "" && inputSec.value != "" && inputMin.value != "" && (studyBtnClicked || meditateBtnClicked || exerciseBtnClicked)) {
       switchToTimer();
       addTimerValues();
     };
 };
 
-// document.querySelector('#start-activity').addEventListener("click", switchToTimer);
-
 function switchToTimer() {
     var leftSection = document.querySelector('.left-section');
     var timerSection = document.querySelector('.run-timer');
-        timerSection.classList.remove('hidden');
-        leftSection.parentNode.replaceChild(timerSection, leftSection);
+    timerSection.classList.remove('hidden');
+    leftSection.parentNode.replaceChild(timerSection, leftSection);
 };
-
-
-
 
 // don't allow switch to timerSection unless all 4 forms are filled
 // on click, replace timer values and activity value with values from input fields
@@ -140,7 +132,6 @@ var begin = document.querySelector(".timer-button");
 begin.addEventListener("click", countdown);
 
 function countdown() {
-
   var minLeft = parseInt(inputMin.value) || 0;
   var secLeft = parseInt(inputSec.value) || 0;
   setInterval (timer, 1000)
@@ -209,10 +200,8 @@ exerciseBtn.addEventListener("click", function() {
   studyBtn.classList.add("study-default");
 });
 
-
-var timerButton = document.querySelector(".timer-button");
-
 document.querySelector('#start-activity').addEventListener("click", function() {
+  var timerButton = document.querySelector(".timer-button");
   if (studyBtn.classList.contains("study-active")) {
     timerButton.style.borderColor = "#B3FD78";
   } else if (meditateBtn.classList.contains("meditate-active")) {
@@ -223,17 +212,16 @@ document.querySelector('#start-activity').addEventListener("click", function() {
 });
 
 // on log activity button click, replace right side p-text with card
-var logActivity = document.querySelector('.log');
-
-logActivity.addEventListener('click', function (event) {
-  console.log(event);
+document.querySelector('.log').addEventListener('click', function (event) {
   var rightSidePH = document.querySelector(".default-message");
-  rightSidePH.style.display = "none";
   var card = document.querySelector(".card");
-  card.classList.remove("hide-card");
   var cardCategory = document.querySelector(".reason");
-  // cardCategory.innerHTML = selected category
   var cardColor = document.querySelector(".indicator");
+  var cardTime = document.querySelector(".time");
+  var cardDescription = document.querySelector(".userInput");
+
+  rightSidePH.style.display = "none";
+  card.classList.remove("hide-card");
   if (studyBtn.classList.contains("study-active")) {
     cardColor.style.backgroundColor = "#B3FD78";
     cardCategory.innerHTML = "Study";
@@ -243,18 +231,8 @@ logActivity.addEventListener('click', function (event) {
   } else if (exerciseBtn.classList.contains("exercise-active")) {
     cardColor.style.backgroundColor = "#FD8078"; };
     cardCategory.innerHTML = "Exercise";
-  var cardTime = document.querySelector(".time");
-  cardTime.innerHTML = `${timeLeftMin.innerHTML} MIN ${timeLeftSec.innerHTML} SECONDS`;
-  var cardDescription = document.querySelector(".userInput");
-  cardDescription.innerHTML = inputActivity.value;
 
+    cardTime.innerHTML = `${timeLeftMin.innerHTML} MIN ${timeLeftSec.innerHTML} SECONDS`;
+
+    cardDescription.innerHTML = inputActivity.value;
 });
-
-
-class Cards {
-  constructor(category, color, minutes, seconds, description) {
-    this.minutes = minutes;
-    this.category = category;
-    this.description = description;
-  }
-};
