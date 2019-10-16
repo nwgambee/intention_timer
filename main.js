@@ -138,7 +138,6 @@ function countdown() {
   var secLeft = parseInt(inputSec.value) || 0;
   var counting = setInterval (timer, 1000)
   function timer() {
-    console.log('hi');
     if (secLeft == 0 && minLeft == 0) {
       timerButton.innerHTML = "You did it!";
       clearInterval(counting);
