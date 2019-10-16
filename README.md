@@ -19,4 +19,4 @@ The goal of this iteration was to begin adding functionality with JS. One part o
 For iteration 2, we had to ensure that the basic functionality is all complete. Primarily, the timer had to begin counting down following a lick on the 'Start' button. An alert also appears when the timer reaches 00:00.
 
 #### Iteration 3 - Logging Past Activities
-This iteration included a function where an activity appear will appear in the right-side column of the page that represents the activity that was just finished. We were able to log one card with the time, description, and category of the current event.
+This iteration included a function where an activity card appear will appear in the right-side column of the page that represents the activity that was just finished. We were able to log one card with the time, description, and category of the current activity.
