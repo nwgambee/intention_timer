@@ -36,9 +36,9 @@ function selectExerciseBtn() {
 };
 
 // make start timer button border color match selected category button
+var timerButton = document.querySelector(".timer-button");
 document.querySelector('#start-activity').addEventListener("click", matchBorderColor);
 function matchBorderColor() {
-  var timerButton = document.querySelector(".timer-button");
   if (studyBtn.classList.contains("study-active")) {
     timerButton.style.borderColor = "#B3FD78";
   } else if (meditateBtn.classList.contains("meditate-active")) {
