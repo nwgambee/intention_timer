@@ -15,26 +15,26 @@
       <section class="left-section">
         <h4 class="select">Select a category:</h4>
         <div class="buttons-div">
-          <button class="study-default" id="study" type="button" name="button">Study</button>
-          <button class="meditate-default" id="meditate" type="button" name="button">Meditate</button>
-          <button class="exercise-default" id="exercise" type="button" name="button">Exercise</button>
+          <button class="study-default btn" id="study" type="button" name="button">Study</button>
+          <button class="meditate-default btn" id="meditate" type="button" name="button">Meditate</button>
+          <button class="exercise-default btn" id="exercise" type="button" name="button">Exercise</button>
         </div>
         <p class="error-message hidden-warning" id="error-category"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">Please select a category.</p>
         <section class="forms">
           <form class="inputs" action="index.html" method="post">
-            <div class="info">
+            <div class="info all-form">
               <h4>What would you like to accompish during this time?</h4>
-              <input class="big-input" type="text" name="" value="" />
+              <input class="big-input all-input" type="text" name="" value="" />
               <p class="error-message hidden-warning" id="error-description"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">A description is required.</p>
             </div>
-            <div class="minute">
+            <div class="time all-form">
               <h4>Minutes</h4>
-              <input class ="small-input" id="minutes" type="text" name="" value="">
+              <input class ="small-input all-input" id="minutes" type="text" name="" value="">
               <p class="error-message hidden-warning" id="error-minutes"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">Please enter an amount of minutes.</p>
             </div>
-            <div class="second">
+            <div class="time all-form">
               <h4>Seconds</h4>
-              <input class ="small-input" id="seconds" type="text" name="" value="">
+              <input class ="small-input all-input" id="seconds" type="text" name="" value="">
               <p class="error-message hidden-warning" id="error-seconds"> <img id="warning-icon" src="./assets/warning.svg" alt="warning icon">Please enter an amount of seconds.</p>
             </div>
             <div class="activity">
@@ -43,7 +43,7 @@
           </form>
         </section>
         <section class="run-timer hidden">
-          <h3>LOG ACTIVITY HERE</h3>
+          <h3></h3>
           <p class="all-timer"><span class="timer-minute all-timer">05</span>:<span class="timer-second all-timer">00</span></p>
           <button class="timer-button" type="button" name="button">Start</button>
           <button class="log">Log Activity</button>
@@ -64,5 +64,5 @@
     </section>
   </body>
   <script src="main.js"></script>
-  
+
 </html>
