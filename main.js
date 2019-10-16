@@ -136,11 +136,12 @@ begin.addEventListener("click", countdown);
 function countdown() {
   var minLeft = parseInt(inputMin.value) || 0;
   var secLeft = parseInt(inputSec.value) || 0;
-
-  setInterval (timer, 1000)
+  var counting = setInterval (timer, 1000)
   function timer() {
+    console.log('hi');
     if (secLeft == 0 && minLeft == 0) {
       timerButton.innerHTML = "You did it!";
+      clearInterval(counting);
       return;
     };
     secLeft -= 1;
