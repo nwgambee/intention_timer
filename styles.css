@@ -1,3 +1,4 @@
+/* this section formats the main styling of our page */
 * {
   box-sizing: border-box;
   font-family: 'Montserrat';
@@ -11,6 +12,7 @@ body {
   height: 100%;
 }
 
+/* this formats the header and subheaders, inputs, and buttons on the left section of the page.*/
 header {
   background-color: #46424D;
   color: #FFF;
@@ -26,16 +28,28 @@ h1 {
   text-align: center;
 }
 
+h4 {
+  color: #fff;
+  font-size: 18px;
+}
+
+.left-subheader {
+  color: #CBC9CF;
+}
+
+.select {
+  padding-left: 11%;
+  padding-top: 30px;
+}
+
+/* main holds the hidden timer portion of the page as well as the section that
+you see upon loading the page, keeping sizing consistent  */
 main {
   background-color: #2B2733;
   display: flex;
   flex-wrap: wrap;
   padding: 7px 2% 15px 2%;
   width: 65%;
-}
-
-.left-subheader {
-  color: #CBC9CF;
 }
 
 .left-section {
@@ -47,106 +61,10 @@ main {
   margin-bottom: 50px;
   padding-bottom: 55%;
   width: 100%;
-}
 
-h4 {
-  color: #fff;
-  font-size: 18px;
-}
+/* this section styles the buttons both default, seen upon loading,
+and active when they have been clicked */
 
-.select {
-  padding-left: 11%;
-  padding-top: 30px;
-}
-
-.study-default {
-  background-color: #46424D;
-  background-image: url(./assets/study.svg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 18%;
-  border: 2px solid #FFF;
-  border-radius: 5px;
-  color: #FFF;
-  font-size: 17px;
-  height: 74px;
-  padding-top: 30px;
-  width: 21%;
-}
-
-.study-active {
-  background-image: url(./assets/study-active.svg);
-  background-color: #46424D;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 18%;
-  border: 2px solid #B3FD78;
-  border-radius: 5px;
-  color: #B3FD78;
-  font-size: 17px;
-  height: 74px;
-  padding-top: 30px;
-  width: 21%;
-}
-
-.meditate-default {
-  background-color: #46424D;
-  background-image: url(./assets/meditate.svg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 18%;
-  border: 2px solid #FFF;
-  border-radius: 5px;
-  color: #FFF;
-  font-size: 17px;
-  height: 74px;
-  padding-top: 30px;
-  width: 21%;
-}
-
-.meditate-active {
-  background-image: url(./assets/meditate-active.svg);
-  background-color: #46424D;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 18%;
-  border: 2px solid #C278FD;
-  border-radius: 5px;
-  color: #C278FD;
-  font-size: 17px;
-  height: 74px;
-  padding-top: 30px;
-  width: 21%;
-}
-
-.exercise-default {
-  background-color: #46424D;
-  background-image: url(./assets/exercise.svg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 18%;
-  border: 2px solid #FFF;
-  border-radius: 5px;
-  color: #FFF;
-  font-size: 17px;
-  height: 74px;
-  padding-top: 30px;
-  width: 21%;
-}
-
-.exercise-active {
-  background-image: url(./assets/exercise-active.svg);
-  background-color: #46424D;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 18%;
-  border: 2px solid #FD8078;
-  border-radius: 5px;
-  color: #FD8078;
-  font-size: 17px;
-  height: 74px;
-  padding-top: 30px;
-  width: 21%;
 }
 
 .buttons-div {
@@ -155,64 +73,58 @@ h4 {
   padding: 0px 6% 0px 6%;
 }
 
-.forms {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.btn {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 18%;
+  border-radius: 5px;
+  font-size: 17px;
+  height: 74px;
+  padding-top: 30px;
+  width: 21%;
 }
 
-.inputs {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.info {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  padding-left: 11%;
-  padding-top: 39px;
-  width: 100%;
-}
-
-.minute {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-left: 11%;
-  padding-top: 50px;
-  width: 50%;
-}
-
-.second {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-left: 8%;
-  padding-right: 4%;
-  padding-top: 50px;
-  width: 50%;
-}
-
-.big-input {
-  border: none;
-  border-bottom: 2px solid #CBC9CF;
+.study-default {
   background-color: #46424D;
+  background-image: url(./assets/study.svg);
+  border: 2px solid #FFF;
   color: #FFF;
-  height: 40px;
-  width: 86%;
 }
 
-.small-input {
-  border: none;
-  border-bottom: 2px solid #CBC9CF;
+.study-active {
   background-color: #46424D;
-  color: #FFF;
-  font-size: 18px;
-  height: 40px;
-  width: 79%;
+  background-image: url(./assets/study-active.svg);
+  border: 2px solid #B3FD78;
+  color: #B3FD78;
 }
 
+.meditate-default {
+  background-color: #46424D;
+  background-image: url(./assets/meditate.svg);
+  border: 2px solid #FFF;
+  color: #FFF;
+}
+
+.meditate-active {
+  background-image: url(./assets/meditate-active.svg);
+  background-color: #46424D;
+  border: 2px solid #C278FD;
+  color: #C278FD;
+}
+
+.exercise-default {
+  background-color: #46424D;
+  background-image: url(./assets/exercise.svg);
+  border: 2px solid #FFF;
+  color: #FFF;
+}
+
+.exercise-active {
+  background-color: #46424D;
+  background-image: url(./assets/exercise-active.svg);
+  border: 2px solid #FD8078;
+  color: #FD8078;
+}
 .activity {
   display: flex;
   justify-content: flex-end;
@@ -231,30 +143,73 @@ h4 {
   width: 28%;
 }
 
-.right_side {
-  background-color: #2B2733;
-  border-left: 4px solid #46424D;;
+/* This formats the inputs seen upon loading */
+.forms {
   display: flex;
-  flex-flow: column wrap;
-  font-size: 16px;
-  padding: 10px 35px 0px 35px;
-  width: 35%;
-}
-
-.right-subheader {
-  color: #CBC9CF;
+  justify-content: center;
   width: 100%;
 }
 
-.default-message {
-  color: #CBC9CF;
-  letter-spacing: 0px;
-  line-height: 200%;
-  padding-left: 30px;
-  padding-right: 30px;
-  text-align: center;
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.all-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 11%;
+}
+
+.info {
+  padding-top: 39px;
+  width: 100%;
+}
+
+.time {
+  padding-top: 50px;
+  width: 50%;
+}
+
+.all-input {
+  border: none;
+  border-bottom: 2px solid #CBC9CF;
+  background-color: #46424D;
+  color: #FFF;
+  font-size: 18px;
+  height: 40px;
+}
+
+.big-input {
+  width: 86%;
+}
+
+.small-input {
+  width: 79%;
+}
+
+/* This styles and hides/unhides error message */
+.error-message {
+  color: #EFB7EC;
+}
+
+#error-category {
+  margin-left: 115px;
+}
+
+.hidden-warning {
+  display: none;
+}
+
+#warning-icon {
+  height: 15px;
+  margin-right: 8px;
+}
+
+/* This styles the hidden timer that is revealed upon filling all fields
+and starting activity it includes the actual timer, the uplifting message,
+and the button to start the timer and log activites */
 .run-timer {
   align-items: center;
   background-color: #46424D;
@@ -267,7 +222,6 @@ h4 {
   margin-top: 5px;
   margin-bottom: 50px;
   padding-bottom: 50%;
-  width: 100%;
   width: 100%;
 }
 
@@ -305,37 +259,39 @@ h3 {
   display: none;
 }
 
-
-.error-message {
-  color: #EFB7EC;
-
-}
-
-#error-category {
-  margin-left: 115px;
-}
-
-.hidden-warning {
-  display: none;
-}
-
 .log {
   font-size: 18px;
   margin-bottom: 80px;
   text-transform: uppercase;
-  /* width: 100px; */
 }
 
-.past {
-  font-size: 40px;
+/* This styles the right side of the page that doesn't change until
+logging activities */
+.right_side {
+  background-color: #2B2733;
+  border-left: 4px solid #46424D;;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 16px;
+  padding: 10px 35px 0px 35px;
+  width: 35%;
 }
 
-#warning-icon {
-    height: 15px;
-    margin-right: 8px;
+.right-subheader {
+  color: #CBC9CF;
+  width: 100%;
 }
 
+.default-message {
+  color: #CBC9CF;
+  letter-spacing: 0px;
+  line-height: 200%;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
 
+/* This styles the cards created when an activity is logged */
 .card {
   background-color: #46424D;
   border-radius: 4px;
@@ -348,7 +304,6 @@ h3 {
 
 .reason {
   font-weight: bolder;
-
 }
 
 .userInput {
