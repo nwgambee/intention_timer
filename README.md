@@ -10,7 +10,7 @@ The goal of this project is to create an app that allows the user to create spec
 #### Iteration 0 - Zero State
 The zero state of this iteration is the HTML and CSS layout (shown below). We could not move on into the next iteration until this one was complete.
 
-![](./iteration_0.png)
+![](./assets/iteration_0.png)
 
 #### Iteration 1 - Form Functionality
 The goal of this iteration was to begin adding functionality with JS. One part of this was to make the category buttons turn a certain color when selected. We also had to ensure that the minutes/seconds input boxes only accepted numbers and that warnings appear if the forms are submitted without the proper content. Finally, a timer pops up if the "Start Activity" button is clicked and all four forms have valdi content.
