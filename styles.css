@@ -10,7 +10,6 @@ body {
   margin: 0 auto;
   height: 100%;
   width: 100%;
-
 }
 
 /* this formats the header and subheaders, inputs, and buttons on the left section of the page.*/
@@ -20,7 +19,6 @@ header {
   margin-top: 0;
   height: 72px;
   width: 100%;
-
 }
 
 h1 {
@@ -44,7 +42,7 @@ h4 {
   padding-top: 30px;
 }
 
-/* main holds the hidden timer portion of the page as well as the section that
+/* main holds the hidden timer portion of the page as well as the right section that
 you see upon loading the page, keeping sizing consistent  */
 main {
   background-color: #2B2733;
@@ -78,7 +76,7 @@ and active when they have been clicked */
   background-position: top;
   background-repeat: no-repeat;
   background-size: 18%;
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 17px;
   height: 74px;
   padding-top: 30px;
@@ -269,7 +267,7 @@ h3 {
 logging activities */
 .right_side {
   background-color: #2B2733;
-  border-left: 4px solid #46424D;;
+  border-left: 4px solid #46424D;
   display: flex;
   flex-flow: column wrap;
   font-size: 16px;
@@ -343,11 +341,11 @@ logging activities */
   .btn {
     background-image: none;
     font-size: 20px;
-    height: 30px;
+    height: 40px;
     margin: auto;
     margin-bottom: 10px;
     padding: 0px;
-    width: 80%;
+    width: 70%;
   }
 
   .card {
@@ -396,12 +394,36 @@ logging activities */
 }
 
 @media screen and (max-width: 550px){
+  body {
+    flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .left-section {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .right_side{
+    border-top: 4px solid #46424D;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+
+  .run-timer {
+    margin-bottom: 10px;
+    padding-bottom: 10%;
+  }
+
   .btn {
     background-image: none;
     font-size: 15px;
-    height: 25px;
-    margin-bottom: 15px;
+    height: 35px;
+    margin-bottom: 10px;
     padding: 0px;
-    width: 80%;
+    width: 65%;
   }
 }
