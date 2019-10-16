@@ -167,7 +167,7 @@ and active when they have been clicked */
   width: 100%;
 }
 
-.time {
+.times {
   padding-top: 50px;
   width: 50%;
 }
@@ -299,22 +299,33 @@ logging activities */
   color: #FFF;
   display: flex;
   flex-direction: column;
+  height: 112px;
+  margin: 4px;
+  padding: 1px;
+}
+
+.time {
+  width: 50%;
   padding: 8px;
 }
 
 .reason {
   font-weight: bolder;
+  padding: 8px;
 }
 
 .userInput {
   margin-top: 10px;
   font-size: 13px;
+  padding: 8px;
 }
 
 .indicator {
   background-color: #FFF;
   float: right;
   height: 23px;
+  margin-right: 8px;
+  margin-top: 8px;
   width: 5px;
 }
 
