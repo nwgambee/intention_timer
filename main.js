@@ -1,41 +1,45 @@
 // Select only one activity button at a time:
 var studyBtn = document.querySelector("#study");
 
-studyBtn.addEventListener("click", function() {
+studyBtn.addEventListener("click", selectStudyBtn);
+function selectStudyBtn() {
     studyBtn.classList.remove("study-default");
     studyBtn.classList.add("study-active");
     meditateBtn.classList.remove("meditate-active");
     meditateBtn.classList.add("meditate-default");
     exerciseBtn.classList.remove("exercise-active");
     exerciseBtn.classList.add("exercise-default");
-});
+};
 
 var meditateBtn = document.querySelector("#meditate");
 
-meditateBtn.addEventListener("click", function() {
+meditateBtn.addEventListener("click", selectMeditateBtn);
+function selectMeditateBtn() {
   meditateBtn.classList.remove("meditate-default");
   meditateBtn.classList.add("meditate-active");
   studyBtn.classList.remove("study-active");
   studyBtn.classList.add("study-default");
   exerciseBtn.classList.remove("exercise-active");
   exerciseBtn.classList.add("exercise-default");
-});
+};
 
 var exerciseBtn = document.querySelector("#exercise");
 
-exerciseBtn.addEventListener("click", function() {
+exerciseBtn.addEventListener("click", selectExerciseBtn);
+function selectExerciseBtn() {
   exerciseBtn.classList.remove("exercise-default");
   exerciseBtn.classList.add("exercise-active");
   meditateBtn.classList.remove("meditate-active");
   meditateBtn.classList.add("meditate-default");
   studyBtn.classList.remove("study-active");
   studyBtn.classList.add("study-default");
-});
+};
 
-// make start timer button border color match selected category
+// make start timer button border color match selected category button
 var timerButton = document.querySelector(".timer-button");
 
-document.querySelector('#start-activity').addEventListener("click", function() {
+document.querySelector('#start-activity').addEventListener("click", matchBorderColor);
+function matchBorderColor() {
   if (studyBtn.classList.contains("study-active")) {
     timerButton.style.borderColor = "#B3FD78";
   } else if (meditateBtn.classList.contains("meditate-active")) {
@@ -43,22 +47,24 @@ document.querySelector('#start-activity').addEventListener("click", function() {
   } else if (exerciseBtn.classList.contains("exercise-active")) {
     timerButton.style.borderColor = "#FD8078";
   };
-});
+};
 
 // Prevent letters in the minutes/seconds input fields:
-document.querySelector("#minutes").addEventListener("keypress", function (evt) {
+document.querySelector("#minutes").addEventListener("keypress", preventLettersMin);
+function preventLettersMin(evt) {
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
         evt.preventDefault();
     }
-});
+};
 
-document.querySelector("#seconds").addEventListener("keypress", function (evt) {
+document.querySelector("#seconds").addEventListener("keypress", preventLettersSec);
+function preventLettersSec(evt) {
     if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
         evt.preventDefault();
     }
-});
+};
 
-// on start activity click, hide .left-section and show .run-timer element as long as all four fields are valid
+// on 'start activity' click, hide .left-section and show .run-timer element as long as all four fields are valid
 document.querySelector('#start-activity').addEventListener("click", formValidation);
 
 function formValidation() {
@@ -96,8 +102,7 @@ function switchToTimer() {
     leftSection.parentNode.replaceChild(timerSection, leftSection);
 };
 
-// don't allow switch to timerSection unless all 4 forms are filled
-// on click, replace timer values and activity value with values from input fields
+// on click, replace timer values and activity description with values from input fields
 var inputMin = document.querySelector('#minutes');
 var inputSec = document.querySelector('#seconds');
 var timeLeftMin = document.querySelector('.timer-minute');
@@ -105,7 +110,6 @@ var timeLeftSec = document.querySelector('.timer-second');
 var placeHold = document.querySelector('h3')
 var inputActivity = document.querySelector('.big-input')
 var startActivityBtn = document.querySelector('#start-activity');
-
 
 function addTimerValues() {
   if (inputMin.value < 10) {
@@ -121,13 +125,12 @@ function addTimerValues() {
   else {
     timeLeftSec.innerHTML = inputSec.value;
   }
-  // timeLeftSec.innerHTML = inputSec.value;
   placeHold.innerHTML = inputActivity.value;
   var changeSubheader = document.querySelector('.left-subheader');
   changeSubheader.innerText = 'Current Activity';
 };
 
-// This allows users to start a timer by entering the desired minutes and seconds and clicking start.
+// timer countdown functionality
 var begin = document.querySelector(".timer-button");
 begin.addEventListener("click", countdown);
 
@@ -136,10 +139,8 @@ function countdown() {
   var secLeft = parseInt(inputSec.value) || 0;
   setInterval (timer, 1000)
   function timer() {
-    // console.log('secLeft', secLeft);
-    // console.log('minLeft', minLeft);
     if (secLeft == 0 && minLeft == 0) {
-      timerButton.innerHTML = "DONE-ZO";
+      timerButton.innerHTML = "You did it!";
       return;
     };
     secLeft -= 1;
@@ -165,54 +166,9 @@ function countdown() {
   };
 };
 
-// Select only one activity button at a time and make "start timer" button border color
-// match selected activity button color
-var studyBtn = document.querySelector("#study");
-
-studyBtn.addEventListener("click", function() {
-    studyBtn.classList.remove("study-default");
-    studyBtn.classList.add("study-active");
-    meditateBtn.classList.remove("meditate-active");
-    meditateBtn.classList.add("meditate-default");
-    exerciseBtn.classList.remove("exercise-active");
-    exerciseBtn.classList.add("exercise-default");
-});
-
-var meditateBtn = document.querySelector("#meditate");
-
-meditateBtn.addEventListener("click", function() {
-  meditateBtn.classList.remove("meditate-default");
-  meditateBtn.classList.add("meditate-active");
-  studyBtn.classList.remove("study-active");
-  studyBtn.classList.add("study-default");
-  exerciseBtn.classList.remove("exercise-active");
-  exerciseBtn.classList.add("exercise-default");
-});
-
-var exerciseBtn = document.querySelector("#exercise");
-
-exerciseBtn.addEventListener("click", function() {
-  exerciseBtn.classList.remove("exercise-default");
-  exerciseBtn.classList.add("exercise-active");
-  meditateBtn.classList.remove("meditate-active");
-  meditateBtn.classList.add("meditate-default");
-  studyBtn.classList.remove("study-active");
-  studyBtn.classList.add("study-default");
-});
-
-document.querySelector('#start-activity').addEventListener("click", function() {
-  var timerButton = document.querySelector(".timer-button");
-  if (studyBtn.classList.contains("study-active")) {
-    timerButton.style.borderColor = "#B3FD78";
-  } else if (meditateBtn.classList.contains("meditate-active")) {
-    timerButton.style.borderColor = "#C278FD";
-  } else if (exerciseBtn.classList.contains("exercise-active")) {
-    timerButton.style.borderColor = "#FD8078";
-  };
-});
-
-// on log activity button click, replace right side p-text with card
-document.querySelector('.log').addEventListener('click', function (event) {
+// on log activity button click, replace right side <p> with logged activity card
+document.querySelector('.log').addEventListener('click', addCard);
+function addCard(event) {
   var rightSidePH = document.querySelector(".default-message");
   var card = document.querySelector(".card");
   var cardCategory = document.querySelector(".reason");
@@ -232,7 +188,7 @@ document.querySelector('.log').addEventListener('click', function (event) {
     cardColor.style.backgroundColor = "#FD8078"; };
     cardCategory.innerHTML = "Exercise";
 
-    cardTime.innerHTML = `${timeLeftMin.innerHTML} MIN ${timeLeftSec.innerHTML} SECONDS`;
+    cardTime.innerHTML = `${inputMin.value} MIN ${inputSec.value} SECONDS`;
 
     cardDescription.innerHTML = inputActivity.value;
-});
+};
