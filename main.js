@@ -36,10 +36,9 @@ function selectExerciseBtn() {
 };
 
 // make start timer button border color match selected category button
-var timerButton = document.querySelector(".timer-button");
-
 document.querySelector('#start-activity').addEventListener("click", matchBorderColor);
 function matchBorderColor() {
+  var timerButton = document.querySelector(".timer-button");
   if (studyBtn.classList.contains("study-active")) {
     timerButton.style.borderColor = "#B3FD78";
   } else if (meditateBtn.classList.contains("meditate-active")) {
@@ -137,6 +136,7 @@ begin.addEventListener("click", countdown);
 function countdown() {
   var minLeft = parseInt(inputMin.value) || 0;
   var secLeft = parseInt(inputSec.value) || 0;
+
   setInterval (timer, 1000)
   function timer() {
     if (secLeft == 0 && minLeft == 0) {
