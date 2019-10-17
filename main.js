@@ -3,12 +3,12 @@ var studyBtn = document.querySelector("#study");
 
 studyBtn.addEventListener("click", selectStudyBtn);
 function selectStudyBtn() {
-    studyBtn.classList.remove("study-default");
-    studyBtn.classList.add("study-active");
-    meditateBtn.classList.remove("meditate-active");
-    meditateBtn.classList.add("meditate-default");
-    exerciseBtn.classList.remove("exercise-active");
-    exerciseBtn.classList.add("exercise-default");
+  studyBtn.classList.remove("study-default");
+  studyBtn.classList.add("study-active");
+  meditateBtn.classList.remove("meditate-active");
+  meditateBtn.classList.add("meditate-default");
+  exerciseBtn.classList.remove("exercise-active");
+  exerciseBtn.classList.add("exercise-default");
 };
 
 var meditateBtn = document.querySelector("#meditate");
@@ -51,16 +51,16 @@ function matchBorderColor() {
 // Prevent letters in the minutes/seconds input fields:
 document.querySelector("#minutes").addEventListener("keypress", preventLettersMin);
 function preventLettersMin(evt) {
-    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
-        evt.preventDefault();
-    }
+  if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+    evt.preventDefault();
+  };
 };
 
 document.querySelector("#seconds").addEventListener("keypress", preventLettersSec);
 function preventLettersSec(evt) {
-    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
-        evt.preventDefault();
-    }
+  if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+    evt.preventDefault();
+  };
 };
 
 // on 'start activity' click, hide .left-section and show .run-timer element as long as all four fields are valid
@@ -77,28 +77,28 @@ function formValidation() {
   var descriptionForm = document.querySelector(".big-input");
 
   if (descriptionForm.value === "") {
-      errorDesc.classList.remove("hidden-warning");
+    errorDesc.classList.remove("hidden-warning");
   };
   if (inputMin.value === "") {
-      errorMin.classList.remove("hidden-warning");
+    errorMin.classList.remove("hidden-warning");
   };
   if (inputSec.value ==="") {
-      errorSec.classList.remove("hidden-warning");
+    errorSec.classList.remove("hidden-warning");
   };
   if (!studyBtnClicked && !meditateBtnClicked && !exerciseBtnClicked) {
-        errorCat.classList.remove("hidden-warning");
+    errorCat.classList.remove("hidden-warning");
   };
   if (descriptionForm.value != "" && inputSec.value != "" && inputMin.value != "" && (studyBtnClicked || meditateBtnClicked || exerciseBtnClicked)) {
-      switchToTimer();
-      addTimerValues();
-    };
+    switchToTimer();
+    addTimerValues();
+  };
 };
 
 function switchToTimer() {
-    var leftSection = document.querySelector('.left-section');
-    var timerSection = document.querySelector('.run-timer');
-    timerSection.classList.remove('hidden');
-    leftSection.parentNode.replaceChild(timerSection, leftSection);
+  var leftSection = document.querySelector('.left-section');
+  var timerSection = document.querySelector('.run-timer');
+  timerSection.classList.remove('hidden');
+  leftSection.parentNode.replaceChild(timerSection, leftSection);
 };
 
 // on click, replace timer values and activity description with values from input fields
@@ -130,16 +130,16 @@ function addTimerValues() {
 };
 
 // timer countdown functionality
-var begin = document.querySelector(".timer-button");
-begin.addEventListener("click", countdown);
+document.querySelector(".timer-button").addEventListener("click", countdown);
 
 function countdown() {
-  var minLeft = parseInt(inputMin.value) || 0;
-  var secLeft = parseInt(inputSec.value) || 0;
+  var minLeft = parseInt(inputMin.value);
+  var secLeft = parseInt(inputSec.value);
   var counting = setInterval (timer, 1000)
   function timer() {
     if (secLeft == 0 && minLeft == 0) {
       timerButton.innerHTML = "You did it!";
+      document.querySelector('.log').classList.remove("hidden");
       clearInterval(counting);
       return;
     };
@@ -156,7 +156,7 @@ function countdown() {
       timeLeftSec.innerHTML = secLeft;
     } else if (secLeft === 0) {
       timeLeftSec.innerHTML = "00";
-     };
+    };
 
     if (minLeft < 10) {
       timeLeftMin.innerHTML = "0" + minLeft;
@@ -187,8 +187,6 @@ function addCard(event) {
   } else if (exerciseBtn.classList.contains("exercise-active")) {
     cardColor.style.backgroundColor = "#FD8078"; };
     cardCategory.innerHTML = "Exercise";
-
     cardTime.innerHTML = `${inputMin.value} MIN ${inputSec.value} SECONDS`;
-
     cardDescription.innerHTML = inputActivity.value;
 };
