@@ -407,8 +407,9 @@ logging activities */
     padding-bottom: 10px;
   }
 
-  .right_side{
+  .right_side {
     border-top: 4px solid #46424D;
+    border-left: none;
     padding-bottom: 50px;
     width: 100%;
   }
